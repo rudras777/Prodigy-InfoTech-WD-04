@@ -1,0 +1,151 @@
+/* ===== Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ===== Reset and Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* ===== Container Styling ===== */
+.weather-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.weather-container:hover {
+  transform: scale(1.01);
+}
+
+/* ===== Heading ===== */
+.weather-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* ===== Input and Button ===== */
+input[type="text"] {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  width: 70%;
+  max-width: 280px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  background-color: #e0e0e0;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+button {
+  padding: 12px 20px;
+  background: #00c6ff;
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #005bea, #00c6ff);
+  transform: scale(1.05);
+}
+
+/* ===== Weather Info Box ===== */
+.info {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.info p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.info img {
+  margin-top: 15px;
+  width: 80px;
+  height: 80px;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .weather-container {
+    padding: 30px 20px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* ===== Alert Style (error messages) ===== */
+#weatherInfo p[style*="color:red"] {
+  background-color: rgba(255, 0, 0, 0.2);
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+/* ===== Footer (Optional) ===== */
+.footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
